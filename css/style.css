@@ -325,7 +325,7 @@ body .h1 {
   font-size: 1em;
   text-transform: uppercase;
   font-weight: normal;
-  color: #ffba5f;
+  color: #6de6ff;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -342,7 +342,7 @@ body .h2 {
   text-transform: uppercase;
 }
 body h3 {
-  color: #6de6ff;
+  color: #ffba5f;
   font-weight: normal;
   font-size: 0.9rem;
   font-size: 14px;
@@ -460,6 +460,38 @@ cn {
 }
 video::-webkit-media-controls-panel {
   background-image: linear-gradient(transparent, transparent) !important;
+}
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+ol:before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  background: #f00;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  height: calc(100% - 10px);
+}
+ol li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+ol li:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f00;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 10px;
 }
 @font-face {
   font-style: normal;
