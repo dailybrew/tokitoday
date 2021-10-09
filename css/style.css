@@ -471,27 +471,12 @@ ol:before {
   content: "";
   display: inline-block;
   width: 2px;
-  background: #f00;
+  background: #98c379;
   position: absolute;
-  left: 3px;
+  left: -35px;
   top: 5px;
   height: calc(100% - 10px);
-}
-ol li {
-  position: relative;
-  padding-left: 15px;
-  margin-bottom: 15px;
-}
-ol li:before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #f00;
-  position: absolute;
-  left: 0;
-  top: 5px;
-  border-radius: 10px;
+  opacity: 0.2;
 }
 @font-face {
   font-style: normal;
