@@ -326,7 +326,6 @@ body .h1 {
   text-transform: uppercase;
   font-weight: normal;
   color: #6de6ff;
-  font-size: 140%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -342,7 +341,7 @@ body .h2 {
   font-size: 14px;
   text-transform: uppercase;
 }
-body h3 {
+body h4 {
   color: #ffba5f;
   font-weight: normal;
   font-size: 0.9rem;
@@ -350,9 +349,9 @@ body h3 {
   text-transform: uppercase;
   letter-spacing: 0.03rem;
 }
-body h4 {
+body h3 {
   font-weight: normal;
-  color: #fd90ff;
+  color: #ff836d;
 }
 body h5 {
   color: #eee;
