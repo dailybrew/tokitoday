@@ -458,6 +458,11 @@ pink {
 cn {
   font-size: 140%;
 }
+ss {
+  font-family: 'sitelen_latinregular';
+  font-size: 550%;
+  font-variant-ligatures: contextual;
+}
 video::-webkit-media-controls-panel {
   background-image: linear-gradient(transparent, transparent) !important;
 }
@@ -482,6 +487,12 @@ ol:before {
   font-style: normal;
   font-family: Monoid;
   src: local("Monoid"), url("../lib/Monoid/Monoid.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'sitelen_latinregular';
+  src: url("../lib/sitelen/sitelenlatin_135-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 *,
 *:before,
@@ -1631,13 +1642,13 @@ code {
 }
 .highlight figcaption {
   margin: -5px 0 5px;
-  color: #908d8d;
+  color: #a2a248;
   font-size: 0.9em;
   transform: scale(1);
 }
 .highlight figcaption a {
   float: right;
-  color: #908d8d;
+  color: #a2a248;
   font-style: italic;
   font-size: 0.8em;
   background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
@@ -1646,7 +1657,7 @@ code {
   background-repeat: repeat-x;
 }
 .highlight figcaption a:hover {
-  color: #a6a4a4;
+  color: #bb6;
 }
 .highlight figcaption:before,
 .highlight figcaption content: "" {
