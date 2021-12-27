@@ -340,18 +340,29 @@ body .h2 {
   font-size: 1rem;
   font-size: 14px;
   text-transform: uppercase;
+  line-height: 150%;
+  border-bottom: 1px solid rgba(109,230,255,0.5);
+  width: 100%;
+  display: block;
 }
 body h4 {
-  color: #ffba5f;
+  color: #98c379;
   font-weight: normal;
   font-size: 0.9rem;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
+  border-bottom: 1px solid rgba(152,195,121,0.5);
+  width: 100%;
+  display: block;
 }
 body h3 {
   font-weight: normal;
-  color: #ff836d;
+  color: #ffba5f;
+  line-height: 150%;
+  border-bottom: 1px solid rgba(255,186,95,0.5);
+  width: 100%;
+  display: block;
 }
 body h5 {
   color: #eee;
@@ -425,10 +436,11 @@ body table {
   text-align: left;
   font-size: 12px;
   overflow: auto;
+  margin-bottom: 30px;
 }
 body th {
   padding: 8px;
-  border-bottom: 1px dashed #98c379;
+  border-bottom: 1px solid rgba(152,195,121,0.2);
   color: #98c379;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -437,7 +449,7 @@ body th {
 body td {
   padding: 0 8px;
   border-bottom: none;
-  border-bottom: 1px dashed #98c379;
+  border-bottom: 1px solid rgba(152,195,121,0.2);
 }
 white,
 w {
@@ -490,7 +502,7 @@ ol:before {
 }
 @font-face {
   font-family: 'sitelen_latinregular';
-  src: url("../lib/sitelen/sitelenlatin_135-webfont.woff") format("woff");
+  src: url("../lib/sitelen/sitelenlatin_1.3.4mod-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
