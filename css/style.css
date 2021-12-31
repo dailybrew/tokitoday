@@ -451,6 +451,12 @@ body td {
   border-bottom: none;
   border-bottom: 1px solid rgba(152,195,121,0.2);
 }
+tape {
+  background-image: url("../images/tape.png");
+  background-repeat: no-repeat;
+  padding-left: 70px; /* width of the image plus a little extra padding */
+  display: block; /* may not need this, but I've found I do */
+}
 white,
 w {
   color: #eee;
