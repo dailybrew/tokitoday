@@ -454,8 +454,12 @@ body td {
 tape {
   background-image: url("../images/tape.png");
   background-repeat: no-repeat;
-  padding-left: 70px; /* width of the image plus a little extra padding */
+  padding-left: 30px; /* width of the image plus a little extra padding */
   display: block; /* may not need this, but I've found I do */
+  background-position: bottom 4px right 100%;
+}
+space {
+  margin-top: 20px;
 }
 white,
 w {
