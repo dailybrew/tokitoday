@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Cooperative Game Theory in Game DesignAuthor: Lloyd Shapley and others Cooperative Game Theory is a fascinating concept in game design that explores how players can work together to achieve common goa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cooperative Game Theory">
+<meta property="og:url" content="http://tokipona.today/2024/02/27/Cooperative-Game-Theory/index.html">
+<meta property="og:site_name" content="toki pona today!">
+<meta property="og:description" content="Cooperative Game Theory in Game DesignAuthor: Lloyd Shapley and others Cooperative Game Theory is a fascinating concept in game design that explores how players can work together to achieve common goa">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-27T16:52:51.000Z">
+<meta property="article:modified_time" content="2024-02-27T16:53:03.013Z">
+<meta property="article:author" content="jan Pitaki">
+<meta property="article:tag" content="gamedesign">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Cooperative Game Theory</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="toki pona today!" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2024/02/27/Non-Cooperative-Game-Theory/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2024/02/27/Learning-by-Game-Theory/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&text=Cooperative Game Theory"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&title=Cooperative Game Theory"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&is_video=false&description=Cooperative Game Theory"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Cooperative Game Theory&body=Check out this article: http://tokipona.today/2024/02/27/Cooperative-Game-Theory/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&title=Cooperative Game Theory"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cooperative-Game-Theory-in-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Cooperative Game Theory in Game Design</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Cooperative Game Theory
+    </h1>
+
+
+    <div class="meta">
+    
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/gamedesign/" rel="tag">gamedesign</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Cooperative-Game-Theory-in-Game-Design"><a href="#Cooperative-Game-Theory-in-Game-Design" class="headerlink" title="Cooperative Game Theory in Game Design"></a>Cooperative Game Theory in Game Design</h1><p><strong>Author:</strong> Lloyd Shapley and others</p>
+<p>Cooperative Game Theory is a fascinating concept in game design that explores how players can work together to achieve common goals. Developed by Lloyd Shapley and other researchers, this theory delves into the strategies and dynamics of cooperation within games. It provides insights into how players can collaborate, negotiate, and coordinate their actions to maximize mutual benefits.</p>
+<p><strong>Conclusion of this theory:</strong></p>
+<p>In essence, Cooperative Game Theory highlights the potential for cooperation and synergy among players in a game. By understanding the principles of this theory, game designers can create compelling gameplay experiences that foster teamwork, strategic planning, and mutual success.</p>
+<p><strong>Implications to RPG designers:</strong></p>
+<ol>
+<li><p><strong>Character Classes and Abilities:</strong> RPG designers can implement diverse character classes and abilities that complement each other, encouraging players to cooperate and strategize together. For example, a healer class could support a tank class by providing healing and protection in battle, fostering collaboration and teamwork.</p>
+</li>
+<li><p><strong>Quests and Objectives:</strong> Designers can create quests and objectives that require cooperation among players to complete successfully. By incorporating challenges that necessitate teamwork and coordination, RPGs can incentivize players to work together towards a common goal.</p>
+</li>
+<li><p><strong>Shared Resources and Rewards:</strong> Implementing shared resources and rewards can motivate players to collaborate and make collective decisions. For instance, a group of players may need to pool their resources to unlock a special gear upgrade or access a hidden area, promoting teamwork and shared achievements.</p>
+</li>
+<li><p><strong>Puzzle-solving Mechanics:</strong> Introducing puzzle-solving mechanics that require input and insights from multiple players can enhance cooperation within RPGs. By presenting challenges that demand collaborative problem-solving and communication, designers can encourage players to work together and think creatively as a team.</p>
+</li>
+</ol>
+<p><strong>Example:</strong> In the popular RPG “Divinity: Original Sin 2,” players take on different roles with unique abilities that complement each other in combat and exploration. The game’s cooperative gameplay mechanics emphasize teamwork and strategic coordination among party members, promoting a sense of camaraderie and shared accomplishments.</p>
+<p><strong>Game Reference:</strong> <em>Divinity: Original Sin 2</em></p>
+<p>By incorporating the principles of Cooperative Game Theory into RPG design, developers can create immersive and engaging gaming experiences that prioritize cooperation, teamwork, and mutual success. This approach not only enhances gameplay dynamics but also fosters a sense of community and collaboration among players.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cooperative-Game-Theory-in-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Cooperative Game Theory in Game Design</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&text=Cooperative Game Theory"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&title=Cooperative Game Theory"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&is_video=false&description=Cooperative Game Theory"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Cooperative Game Theory&body=Check out this article: http://tokipona.today/2024/02/27/Cooperative-Game-Theory/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Cooperative-Game-Theory/&title=Cooperative Game Theory"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    jan Pitaki
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/tags/lesson">Lessons</a></li>
+         
+          <li><a href="/tags/practice">practice</a></li>
+         
+          <li><a href="/tags/blog">blog</a></li>
+         
+          <li><a href="/tags/other">other</a></li>
+         
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+         
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
