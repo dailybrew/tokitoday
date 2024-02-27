@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Evolutionary Game Theory in Game DesignAuthor: John Maynard SmithEvolutionary Game Theory is a fascinating concept that has made its way into the world of game design, thanks in part to the groundbrea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Evolutionary Game Theory">
+<meta property="og:url" content="http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/index.html">
+<meta property="og:site_name" content="toki pona today!">
+<meta property="og:description" content="Evolutionary Game Theory in Game DesignAuthor: John Maynard SmithEvolutionary Game Theory is a fascinating concept that has made its way into the world of game design, thanks in part to the groundbrea">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-27T16:35:35.000Z">
+<meta property="article:modified_time" content="2024-02-27T16:35:43.963Z">
+<meta property="article:author" content="jan Pitaki">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Evolutionary Game Theory</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="toki pona today!" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2024/02/27/L-electronique-dans-la-prestidigitation-1/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&text=Evolutionary Game Theory"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&title=Evolutionary Game Theory"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&is_video=false&description=Evolutionary Game Theory"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Evolutionary Game Theory&body=Check out this article: http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&title=Evolutionary Game Theory"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Evolutionary-Game-Theory-in-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Evolutionary Game Theory in Game Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Author-John-Maynard-Smith"><span class="toc-number">1.0.1.</span> <span class="toc-text">Author: John Maynard Smith</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Description"><span class="toc-number">1.0.2.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-number">1.0.3.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Implications-to-RPG-Designers"><span class="toc-number">1.0.4.</span> <span class="toc-text">Implications to RPG Designers</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Evolutionary Game Theory
+    </h1>
+
+
+    <div class="meta">
+    
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/blog/" rel="tag">blog</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Evolutionary-Game-Theory-in-Game-Design"><a href="#Evolutionary-Game-Theory-in-Game-Design" class="headerlink" title="Evolutionary Game Theory in Game Design"></a>Evolutionary Game Theory in Game Design</h1><h3 id="Author-John-Maynard-Smith"><a href="#Author-John-Maynard-Smith" class="headerlink" title="Author: John Maynard Smith"></a>Author: John Maynard Smith</h3><p>Evolutionary Game Theory is a fascinating concept that has made its way into the world of game design, thanks in part to the groundbreaking work of biologist John Maynard Smith. This theory provides insights into how strategies and behaviors evolve in competitive environments, much like in nature.</p>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>In Evolutionary Game Theory, the focus is on the interaction between different strategies chosen by players in a game. These strategies evolve over time based on their success in achieving certain goals. Just like in nature where species adapt to survive, game strategies also adapt and evolve to maximize their chances of winning.</p>
+<p>A key element of Evolutionary Game Theory is the concept of “fitness.” In the context of games, fitness refers to the success of a strategy in achieving its objective, whether it’s capturing territory, scoring points, or outmaneuvering opponents. Strategies that are more “fit” are likely to be adopted and spread within the game population.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The power of Evolutionary Game Theory lies in its ability to predict how strategies will evolve over time in a game. By understanding the dynamics of strategy evolution, game designers can create more engaging and balanced gameplay experiences. This theory helps designers anticipate how players will adapt to different challenges and encourages the creation of diverse and strategic gameplay mechanics.</p>
+<h3 id="Implications-to-RPG-Designers"><a href="#Implications-to-RPG-Designers" class="headerlink" title="Implications to RPG Designers"></a>Implications to RPG Designers</h3><p>For RPG designers, Evolutionary Game Theory can offer valuable insights into character progression systems. Just like how different strategies evolve in competitive games, character builds and abilities in RPGs can evolve based on player preferences and effectiveness in achieving in-game goals.</p>
+<p>An example of this concept in action can be seen in games like “World of Warcraft,” where players experiment with different talent builds and gear setups to optimize their characters for different playstyles. Through observing player behaviors and adapting game mechanics accordingly, RPG designers can create a dynamic and engaging experience that continually evolves with the player community.</p>
+<p>Incorporating elements inspired by Evolutionary Game Theory into RPG design can lead to more player-driven narratives, adaptive gameplay systems, and a deeper sense of immersion in virtual worlds.</p>
+<p>The intersection of Evolutionary Game Theory and game design opens up new possibilities for creating compelling and dynamic gaming experiences that keep players coming back for more.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Evolutionary-Game-Theory-in-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Evolutionary Game Theory in Game Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Author-John-Maynard-Smith"><span class="toc-number">1.0.1.</span> <span class="toc-text">Author: John Maynard Smith</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Description"><span class="toc-number">1.0.2.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-number">1.0.3.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Implications-to-RPG-Designers"><span class="toc-number">1.0.4.</span> <span class="toc-text">Implications to RPG Designers</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&text=Evolutionary Game Theory"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&title=Evolutionary Game Theory"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&is_video=false&description=Evolutionary Game Theory"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Evolutionary Game Theory&body=Check out this article: http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Evolutionary-Game-Theory/&title=Evolutionary Game Theory"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    jan Pitaki
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/tags/lesson">Lessons</a></li>
+         
+          <li><a href="/tags/practice">practice</a></li>
+         
+          <li><a href="/tags/blog">blog</a></li>
+         
+          <li><a href="/tags/other">other</a></li>
+         
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+         
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
