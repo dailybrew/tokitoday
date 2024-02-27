@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Repeated Game Theory in Game DesignAuthor: Robert Axelrod and others Description: Repeated Game theory is a concept in game design that focuses on how interactions between players can evolve over time">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Repeated Game">
+<meta property="og:url" content="http://tokipona.today/2024/02/27/Repeated-Game/index.html">
+<meta property="og:site_name" content="toki pona today!">
+<meta property="og:description" content="Repeated Game Theory in Game DesignAuthor: Robert Axelrod and others Description: Repeated Game theory is a concept in game design that focuses on how interactions between players can evolve over time">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-27T17:16:42.000Z">
+<meta property="article:modified_time" content="2024-02-27T17:16:52.337Z">
+<meta property="article:author" content="jan Pitaki">
+<meta property="article:tag" content="gamedesign">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Repeated Game</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="toki pona today!" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post " href="/2024/02/27/Agent-Based-Modeling-in-Game/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2024/02/27/Social-Choice/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Repeated-Game/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Repeated-Game/&text=Repeated Game"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Repeated-Game/&title=Repeated Game"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Repeated-Game/&is_video=false&description=Repeated Game"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Repeated Game&body=Check out this article: http://tokipona.today/2024/02/27/Repeated-Game/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Repeated-Game/&title=Repeated Game"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Repeated-Game-Theory-in-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Repeated Game Theory in Game Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Player-Relationships"><span class="toc-number">1.1.</span> <span class="toc-text">Player Relationships</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decision-Making"><span class="toc-number">1.2.</span> <span class="toc-text">Decision-Making</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Long-Term-Engagement"><span class="toc-number">1.3.</span> <span class="toc-text">Long-Term Engagement</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Repeated Game
+    </h1>
+
+
+    <div class="meta">
+    
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/gamedesign/" rel="tag">gamedesign</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Repeated-Game-Theory-in-Game-Design"><a href="#Repeated-Game-Theory-in-Game-Design" class="headerlink" title="Repeated Game Theory in Game Design"></a>Repeated Game Theory in Game Design</h1><p><strong>Author</strong>: Robert Axelrod and others</p>
+<p><strong>Description</strong>: Repeated Game theory is a concept in game design that focuses on how interactions between players can evolve over time as they engage in repeated play. This theory, popularized by economists like Robert Axelrod, suggests that players are more likely to cooperate and develop strategies that benefit both parties in a long-term game scenario compared to a one-time game.</p>
+<p>In the context of game design, the Repeated Game theory provides valuable insights into creating engaging and strategic gameplay experiences. By encouraging players to think beyond short-term gains and consider the long-term consequences of their actions, designers can foster a more dynamic and challenging gameplay environment.</p>
+<p><strong>Conclusion</strong>: The Repeated Game theory underscores the importance of creating games that encourage players to think strategically and consider the impact of their decisions over time. By incorporating elements that reward cooperation and long-term planning, designers can create rich and immersive gaming experiences that keep players engaged and coming back for more.</p>
+<p><strong>Implications to RPG Designers</strong>:</p>
+<h2 id="Player-Relationships"><a href="#Player-Relationships" class="headerlink" title="Player Relationships"></a>Player Relationships</h2><p>One implication of Repeated Game theory for RPG designers is the emphasis on building meaningful player relationships. By encouraging cooperation and collaboration among players, designers can create a sense of community and shared goals within the game world. For example, in a role-playing game like <em>Dungeons &amp; Dragons</em>, fostering alliances and encouraging players to work together towards common objectives can enhance the overall gaming experience.</p>
+<h2 id="Decision-Making"><a href="#Decision-Making" class="headerlink" title="Decision-Making"></a>Decision-Making</h2><p>Repeated Game theory also highlights the importance of decision-making in game design. Designers can create scenarios where players must consider the consequences of their actions over multiple rounds of play. By incorporating mechanics that reward strategic thinking and forward planning, designers can challenge players to think critically and adapt their strategies based on evolving gameplay dynamics.</p>
+<h2 id="Long-Term-Engagement"><a href="#Long-Term-Engagement" class="headerlink" title="Long-Term Engagement"></a>Long-Term Engagement</h2><p>For RPG designers, the Repeated Game theory offers insights into creating games that promote long-term engagement. By introducing elements that encourage players to invest time and effort into developing their characters and progressing through the game world, designers can foster a sense of attachment and commitment among players. Games like <em>World of Warcraft</em> demonstrate how a persistent world and ongoing updates can keep players engaged over extended periods of time.</p>
+<p>In conclusion, Repeated Game theory provides valuable guidance for RPG designers looking to create compelling and immersive gaming experiences. By incorporating principles that promote cooperation, strategic thinking, and long-term engagement, designers can develop games that captivate players and spark their creativity and imagination.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Repeated-Game-Theory-in-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Repeated Game Theory in Game Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Player-Relationships"><span class="toc-number">1.1.</span> <span class="toc-text">Player Relationships</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decision-Making"><span class="toc-number">1.2.</span> <span class="toc-text">Decision-Making</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Long-Term-Engagement"><span class="toc-number">1.3.</span> <span class="toc-text">Long-Term Engagement</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Repeated-Game/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Repeated-Game/&text=Repeated Game"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Repeated-Game/&title=Repeated Game"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Repeated-Game/&is_video=false&description=Repeated Game"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Repeated Game&body=Check out this article: http://tokipona.today/2024/02/27/Repeated-Game/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Repeated-Game/&title=Repeated Game"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    jan Pitaki
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/tags/lesson">Lessons</a></li>
+         
+          <li><a href="/tags/practice">practice</a></li>
+         
+          <li><a href="/tags/blog">blog</a></li>
+         
+          <li><a href="/tags/other">other</a></li>
+         
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+         
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
