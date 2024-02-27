@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Understanding Game Systems Theory in Modern Game DesignAuthor: Chris Crawford Brief Introduction and Description of the Theory:Chris Crawford’s Game Systems Theory focuses on the internal structure of">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Game Systems Theory">
+<meta property="og:url" content="http://tokipona.today/2024/02/27/Game-Systems-Theory/index.html">
+<meta property="og:site_name" content="toki pona today!">
+<meta property="og:description" content="Understanding Game Systems Theory in Modern Game DesignAuthor: Chris Crawford Brief Introduction and Description of the Theory:Chris Crawford’s Game Systems Theory focuses on the internal structure of">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-27T09:12:22.000Z">
+<meta property="article:modified_time" content="2024-02-27T09:12:41.737Z">
+<meta property="article:author" content="jan Pitaki">
+<meta property="article:tag" content="gamedesign">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Game Systems Theory</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="toki pona today!" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2024/02/27/Ludic-Interaction-Theory/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Game-Systems-Theory/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&text=Game Systems Theory"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&title=Game Systems Theory"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&is_video=false&description=Game Systems Theory"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Game Systems Theory&body=Check out this article: http://tokipona.today/2024/02/27/Game-Systems-Theory/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&title=Game Systems Theory"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Understanding-Game-Systems-Theory-in-Modern-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Understanding Game Systems Theory in Modern Game Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Brief-Introduction-and-Description-of-the-Theory"><span class="toc-number">1.1.</span> <span class="toc-text">Brief Introduction and Description of the Theory:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusions-of-the-Theory"><span class="toc-number">1.2.</span> <span class="toc-text">Conclusions of the Theory:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Practical-Application-of-this-Theory-for-Strategy-Games"><span class="toc-number">1.3.</span> <span class="toc-text">Practical Application of this Theory for Strategy Games:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Implications-for-Game-Design"><span class="toc-number">1.4.</span> <span class="toc-text">Implications for Game Design:</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Game Systems Theory
+    </h1>
+
+
+    <div class="meta">
+    
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/gamedesign/" rel="tag">gamedesign</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Understanding-Game-Systems-Theory-in-Modern-Game-Design"><a href="#Understanding-Game-Systems-Theory-in-Modern-Game-Design" class="headerlink" title="Understanding Game Systems Theory in Modern Game Design"></a>Understanding Game Systems Theory in Modern Game Design</h2><p><strong>Author</strong>: Chris Crawford</p>
+<h3 id="Brief-Introduction-and-Description-of-the-Theory"><a href="#Brief-Introduction-and-Description-of-the-Theory" class="headerlink" title="Brief Introduction and Description of the Theory:"></a>Brief Introduction and Description of the Theory:</h3><p>Chris Crawford’s Game Systems Theory focuses on the internal structure of games. It analyzes games as dynamic systems composed of elements such as rules, objectives, feedback, and game balance.</p>
+<h3 id="Conclusions-of-the-Theory"><a href="#Conclusions-of-the-Theory" class="headerlink" title="Conclusions of the Theory:"></a>Conclusions of the Theory:</h3><p>The theory emphasizes that to create a successful game, it is crucial to understand and meticulously design the underlying system, ensuring all elements work together to provide a coherent and engaging experience.</p>
+<h3 id="Practical-Application-of-this-Theory-for-Strategy-Games"><a href="#Practical-Application-of-this-Theory-for-Strategy-Games" class="headerlink" title="Practical Application of this Theory for Strategy Games:"></a>Practical Application of this Theory for Strategy Games:</h3><ol>
+<li><strong>Strategy Games like “SimCity” and “Civilization”</strong>:<ul>
+<li>Design a well-balanced game system where each element (rules, objectives, feedback) interacts harmoniously.</li>
+<li>Ensure different systems (combat, exploration, puzzles) are coherently integrated and contribute to the overall game objective.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Implications-for-Game-Design"><a href="#Implications-for-Game-Design" class="headerlink" title="Implications for Game Design:"></a>Implications for Game Design:</h3><ol>
+<li><p><strong>Internal Structure and Balance</strong>:</p>
+<ul>
+<li>Create a balanced game system where each component (rules, objectives, feedback) works in harmony.</li>
+<li>Ensure different game systems (combat, exploration, puzzles) are integrated coherently, contributing to the overall objective of the game.</li>
+</ul>
+</li>
+<li><p><strong>Systemic Dynamics</strong>:</p>
+<ul>
+<li>Develop game dynamics that emerge from interactions between the player and the game systems.</li>
+<li>Ensure these dynamics encourage the player to explore, experiment, and engage meaningfully with the game world.</li>
+</ul>
+</li>
+<li><p><strong>Feedback and Feedback Loops</strong>:</p>
+<ul>
+<li>Implement feedback systems that inform the player about the game state and the consequences of their actions.</li>
+<li>Use positive and negative feedback loops to maintain player engagement and guide them toward game objectives.</li>
+</ul>
+</li>
+<li><p><strong>Complexity and Accessibility</strong>:</p>
+<ul>
+<li>Balance the complexity of game systems to be challenging yet accessible to players of different experience levels.</li>
+<li>Provide integrated learning mechanisms to help new players understand and master the game systems.</li>
+</ul>
+</li>
+<li><p><strong>Thematic Consistency and Immersion</strong>:</p>
+<ul>
+<li>Align game systems with the theme and narrative of the game world to enhance immersion and narrative coherence.</li>
+<li>Ensure every system element contributes to building the game universe and enriching the player’s experience.</li>
+</ul>
+</li>
+</ol>
+<p>By applying the principles of Game Systems Theory, developers can create more coherent, engaging, and immersive strategy games. This approach underlines the importance of a well-constructed internal system and its impact on the player’s experience.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/tags/lesson">Lessons</a></li>
+        
+          <li><a href="/tags/practice">practice</a></li>
+        
+          <li><a href="/tags/blog">blog</a></li>
+        
+          <li><a href="/tags/other">other</a></li>
+        
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+        
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Understanding-Game-Systems-Theory-in-Modern-Game-Design"><span class="toc-number">1.</span> <span class="toc-text">Understanding Game Systems Theory in Modern Game Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Brief-Introduction-and-Description-of-the-Theory"><span class="toc-number">1.1.</span> <span class="toc-text">Brief Introduction and Description of the Theory:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusions-of-the-Theory"><span class="toc-number">1.2.</span> <span class="toc-text">Conclusions of the Theory:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Practical-Application-of-this-Theory-for-Strategy-Games"><span class="toc-number">1.3.</span> <span class="toc-text">Practical Application of this Theory for Strategy Games:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Implications-for-Game-Design"><span class="toc-number">1.4.</span> <span class="toc-text">Implications for Game Design:</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://tokipona.today/2024/02/27/Game-Systems-Theory/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&text=Game Systems Theory"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&title=Game Systems Theory"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&is_video=false&description=Game Systems Theory"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Game Systems Theory&body=Check out this article: http://tokipona.today/2024/02/27/Game-Systems-Theory/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://tokipona.today/2024/02/27/Game-Systems-Theory/&title=Game Systems Theory"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    jan Pitaki
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/tags/lesson">Lessons</a></li>
+         
+          <li><a href="/tags/practice">practice</a></li>
+         
+          <li><a href="/tags/blog">blog</a></li>
+         
+          <li><a href="/tags/other">other</a></li>
+         
+          <li><a href="/tags/gamedesign">gamedesign</a></li>
+         
+          <li><a href="/About/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
